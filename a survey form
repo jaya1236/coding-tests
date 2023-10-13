@@ -1,0 +1,184 @@
+HTML TITLE :customer survey.html
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" >
+  </head>
+  <body>
+    <div class="main-container">
+        <h1 class="main-heading">Customer Servey Form</h1>
+
+        <div class="sub-container">
+            <form class="form-container">
+                <div class="main-input-container">
+                    <div class="input-container">
+                        <label for="userName">Name</label>
+                        <input id="userName" type="text" class="user-input" />
+
+                    </div>
+                    <div class="input-container">
+                        <label for="userEmail">Email</label>
+                        <input id="userEmail" type="text" class="user-input" />
+
+                    </div>
+                </div>
+
+                <div class="products-service-container">
+                    <p>Is the first time you are using products & service?</p>
+                    <div class="input-radio-container">
+                    <div class="click-container">
+                        <input id="yesId" type="radio" class="radio-input" />
+                        <label for="yesId">Yes</label>
+                    </div>
+                    <div class="click-container">
+                        <input id="noId" type="radio" class="radio-input" />
+                        <label for="noId">No</label>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="products-service-container">
+                    <p>Would you suggestion to your friends and colleague?</p>
+                    <div class="input-radio-container">
+                    <div class="click-container">
+                        <input id="friendsId" type="radio" class="radio-input" />
+                        <label for="friendsId">Yes</label>
+                    </div>
+                    <div class="click-container">
+                        <input id="colleagueId" type="radio" class="radio-input" />
+                        <label for="colleagueId">No</label>
+                    </div>
+                    </div>
+
+                </div>
+                <div class="products-service-container">
+                    <p>How satisfied are you with our company overall?</p>
+                    <div class="input-radio-container">
+                    <div class="click-container">
+                        <input id="satisfiedId" type="radio" class="radio-input" />
+                        <label for="satisfiedId">Satisfied</label>
+                    </div>
+                    <div class="click-container">
+                        <input id="undecideId" type="radio" class="radio-input" />
+                        <label for="undecideId">Undecided</label>
+                    </div>
+                    <div class="click-container">
+                        <input id="unsatisfiedId" type="radio" class="radio-input" />
+                        <label for="unsatisfiedId">Unsatisfied</label>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="text-container">
+                    <p>Do you have suggestion to improve our service?</p>
+                    <textarea class="user-type-text" cols="55" rows="5"></textarea>
+                    <br/>
+                </div>
+
+                <button type="submit" class="submit-button" >SUBMIT</button>
+
+
+            </form>
+
+        </div>
+        <p class="bottom-description">@2018 Customer Survey Form. All Rights Reserved | Design by  <span class="span-color" >W3Layouts</span></p>
+
+    </div>
+  </body>
+</html>
+
+CSS TITLE: form.css
+
+.main-container{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(28, 121, 252);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-heading{
+    color: #ffffff;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.sub-container{
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-input-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.user-input{
+    padding: 5px 10px 10px 10px;
+    border: 2px solid #000;
+    margin-top: 8px;
+
+}
+
+.products-service-container{
+    background-color: #fff;
+}
+
+.input-radio-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.radio-input{
+    margin-right: 3px;
+}
+
+.click-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+
+}
+
+.user-type-text{
+    padding: 5px;
+    border: 2px solid #000;
+}
+
+.submit-button{
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(28, 121, 252);
+    color: #ffffff;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.bottom-description{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.span-color{
+    color: blueviolet;
+}
