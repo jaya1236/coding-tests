@@ -1,0 +1,69 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class RomanNumeralConverter {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a Roman numeral
+        System.out.print("Enter a Roman numeral: ");
+        String userInput = scanner.nextLine();
+
+        // Close the Scanner to prevent resource leak
+        scanner.close();
+
+        // Convert the user input to uppercase to handle both upper and lower case
+        String romanNumeral = userInput.toUpperCase();
+
+        // Call the method to convert Roman numeral to integer
+        int result = convertRomanToInteger(romanNumeral);
+
+        if (result != -1) {
+            // Display the result if conversion is successful
+            System.out.println("Integer value of " + romanNumeral + " is: " + result);
+        } else {
+            // Display an error message if conversion fails
+            System.out.println("Invalid Roman numeral. Please enter a valid Roman numeral.");
+        }
+    }
+
+    private static int convertRomanToInteger(String s) {
+        // Create a HashMap to store the values of Roman numerals
+        HashMap<Character, Integer> romanValues = new HashMap<>();
+        romanValues.put('I', 1);
+        romanValues.put('V', 5);
+        romanValues.put('X', 10);
+        romanValues.put('L', 50);
+        romanValues.put('C', 100);
+        romanValues.put('D', 500);
+        romanValues.put('M', 1000);
+
+        int result = 0;
+        int prevValue = 0;
+
+        // Iterate through the Roman numeral string from right to left
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char currentChar = s.charAt(i);
+
+            // Check if the current character is in the HashMap
+            if (!romanValues.containsKey(currentChar)) {
+                return -1; // Return -1 to indicate failure
+            }
+
+            int currentValue = romanValues.get(currentChar);
+
+            // If the current value is less than the previous value, subtract it
+            if (currentValue < prevValue) {
+                result -= currentValue;
+            } else {
+                result += currentValue;
+            }
+
+            // Update the previous value for the next iteration
+            prevValue = currentValue;
+        }
+
+        return result;
+    }
+}
