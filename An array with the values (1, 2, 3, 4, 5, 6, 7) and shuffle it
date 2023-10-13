@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ArrayShuffle {
+    public static void main(String[] args) {
+        // Step 1: Create an array with values (1, 2, 3, 4, 5, 6, 7)
+        Integer[] array = {1, 2, 3, 4, 5, 6, 7};
+
+        // Convert array to ArrayList for shuffling
+        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(array));
+
+        // Step 2: Shuffle the ArrayList
+        Collections.shuffle(arrayList);
+
+        // Print the shuffled array
+        System.out.println("Shuffled Array: " + Arrays.toString(arrayList.toArray()));
+    }
+}
